@@ -1,0 +1,98 @@
+<html><head>
+    <title>OtakuParadise - Le paradis des mangas gratuits pour les vrais fans</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head><body>
+<header>
+  <h1>OtakuParadise</h1>
+  <p>Plongez dans un océan de mangas gratuits, légaux et passionnants !</p>
+  <img id="naruto-run" class="header-anime" src="naruto-gif-24.gif" alt="Naruto en train de courir" width="200" height="100">
+</header>
+
+<main>
+  <div class="search-bar">
+    <input type="text" class="search-input" placeholder="Rechercher un manga..." onkeyup="searchManga(this.value)">
+  </div>
+
+  <div class="genre-filter">
+    <button class="genre-btn active" data-genre="all">Tous</button>
+    <button class="genre-btn" data-genre="shonen">Shōnen</button>
+    <button class="genre-btn" data-genre="shojo">Shōjo</button>
+    <button class="genre-btn" data-genre="seinen">Seinen</button>
+    <button class="genre-btn" data-genre="josei">Josei</button>
+  </div>
+
+  <div class="manga-grid">
+    <div class="manga-item" data-genre="shonen">
+      <img class="manga-cover" src="out-0.webp" alt="Couverture de One Piece" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">One Piece</h3>
+        <p class="manga-author">Eiichiro Oda</p>
+        <button class="download-btn" onclick="downloadManga('one-piece')">Visionner</button>
+      </div>
+    </div>
+    <div class="manga-item" data-genre="shonen">
+      <img class="manga-cover" src="out-0 (1).webp" alt="Couverture de My Hero Academia" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">My Hero Academia</h3>
+        <p class="manga-author">Kohei Horikoshi</p>
+        <button class="download-btn" onclick="downloadManga('my-hero-academia')">Visionner</button>
+      </div>
+    </div>
+    <div class="manga-item" data-genre="seinen">
+      <img class="manga-cover" src="out-0 (2).webp" alt="Couverture de Berserk" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">Berserk</h3>
+        <p class="manga-author">Kentaro Miura</p>
+        <button class="download-btn" onclick="downloadManga('berserk')">Visionner</button>
+      </div>
+    </div>
+    <div class="manga-item" data-genre="shojo">
+      <img class="manga-cover" src="out-0 (3).webp" alt="Couverture de Fruits Basket" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">Fruits Basket</h3>
+        <p class="manga-author">Natsuki Takaya</p>
+        <button class="download-btn" onclick="downloadManga('fruits-basket')">Visionner</button>
+      </div>
+    </div>
+    <div class="manga-item" data-genre="josei">
+      <img class="manga-cover" src="out-0 (4).webp" alt="Couverture de Nana" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">Nana</h3>
+        <p class="manga-author">Ai Yazawa</p>
+        <button class="download-btn" onclick="downloadManga('nana')">Visionner</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="download-counter">
+  Mangas Hors Ligne: <span id="downloadCount">20</span>
+</div>
+
+<button class="night-mode-toggle" onclick="toggleNightMode()">Mode Nuit</button>
+
+<!-- Pop-up de bienvenue -->
+<div class="popup-overlay" id="welcomePopup">
+  <div class="popup-content">
+    <button class="popup-close" onclick="closePopup()">&times;</button>
+    <h2 class="popup-title">Bienvenue sur OtakuParadise !</h2>
+    <p class="popup-text">Cher Otaku, prépare-toi à vivre une expérience manga extraordinaire ! Notre site te propose une vaste collection de mangas gratuits et légaux à regarder hors ligne sans connexion internet. Explore les différents genres, découvre de nouvelles séries et plonge dans des univers fascinants.</p>
+    <p class="popup-text">N'oublie pas de respecter les droits d'auteur et de soutenir tes créateurs préférés quand tu le peux !</p>
+    <button class="popup-btn" onclick="closePopup()">C'est parti !</button>
+  </div>
+</div>
+
+<!-- Login Pop-up -->
+<div class="popup-overlay" id="loginPopup">
+  <div class="popup-content">
+    <button class="popup-close" onclick="closeLoginPopup()">&times;</button>
+    <h2 class="popup-title">Connexion requise</h2>
+    <p class="popup-text">Pour Regarder ce manga, vous devez lier votre compte Facebook afin de profiter du mode hors-ligne </p>
+    <button class="popup-btn" onclick="redirectToLogin()">Se connecter</button>
+  </div>
+</div>
+
+<script src="script.js">
+
+</script>
+</body></html>
