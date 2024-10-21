@@ -1,11 +1,23 @@
 <html><head>
-    <title>OtakuParadise - Le paradis des mangas gratuits pour les vrais fans</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuParadise - Le paradis des mangas gratuits pour les vrais fans</title><meta name="description" content="OtakuParadise - Le paradis des mangas gratuits pour les vrais fans. Plongez dans un univers captivant de mangas gratuits, légaux et passionnants !">
+<meta name="keywords" content="manga, anime, lecture de manga, OtakuParadise, mangas gratuits, animes gratuits, Japon, culture otaku">
+<meta name="author" content="OtakuParadise Team">
+<meta property="og:title" content="OtakuParadise - Le paradis des mangas gratuits pour les vrais fans">
+<meta property="og:description" content="Plongez dans un océan de mangas gratuits, légaux et passionnants sur OtakuParadise.">
+<meta property="og:image" content="URL_DE_L'IMAGE_DU_LOGO">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://otakuparadise.onrender.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OtakuParadise - Le paradis des mangas gratuits pour les vrais fans">
+<meta name="twitter:description" content="Découvrez les meilleurs mangas gratuitement sur OtakuParadise.">
+<meta name="twitter:image" content="URL_DE_L'IMAGE_DU_LOGO">
     <link rel="stylesheet" href="styles.css">
 </head><body>
 <header>
-  <h1>OtakuParadise</h1>
-  <p>Plongez dans un océan de mangas gratuits, légaux et passionnants !</p>
-  <img id="naruto-run" class="header-anime" src="naruto-gif-24.gif" alt="Naruto en train de courir" width="200" height="100">
+    <img id="logo" src="logo1.webp" alt="Logo OtakuParadise" width="150" height="150">
+    <h1>OtakuParadise</h1>
+    <p>Plongez dans un océan de mangas gratuits, légaux et passionnants !</p>
+    <img id="naruto-run" class="header-anime" src="naruto-gif-24.gif" alt="Naruto en train de courir" width="200" height="100">
 </header>
 
 <main>
@@ -22,6 +34,7 @@
   </div>
 
   <div class="manga-grid">
+    <!-- Shōnen Manga -->
     <div class="manga-item" data-genre="shonen">
       <img class="manga-cover" src="out-0.webp" alt="Couverture de One Piece" width="220" height="300">
       <div class="manga-info">
@@ -38,14 +51,16 @@
         <button class="download-btn" onclick="downloadManga('my-hero-academia')">Visionner</button>
       </div>
     </div>
-    <div class="manga-item" data-genre="seinen">
-      <img class="manga-cover" src="out-0 (2).webp" alt="Couverture de Berserk" width="220" height="300">
+    <div class="manga-item" data-genre="shonen">
+      <img class="manga-cover" src="out-0 (5).webp" alt="Couverture de Demon Slayer" width="220" height="300">
       <div class="manga-info">
-        <h3 class="manga-title">Berserk</h3>
-        <p class="manga-author">Kentaro Miura</p>
-        <button class="download-btn" onclick="downloadManga('berserk')">Visionner</button>
+        <h3 class="manga-title">Demon Slayer</h3>
+        <p class="manga-author">Koyoharu Gotouge</p>
+        <button class="download-btn" onclick="downloadManga('demon-slayer')">Visionner</button>
       </div>
     </div>
+
+    <!-- Shōjo Manga -->
     <div class="manga-item" data-genre="shojo">
       <img class="manga-cover" src="out-0 (3).webp" alt="Couverture de Fruits Basket" width="220" height="300">
       <div class="manga-info">
@@ -54,12 +69,48 @@
         <button class="download-btn" onclick="downloadManga('fruits-basket')">Visionner</button>
       </div>
     </div>
+    <div class="manga-item" data-genre="shojo">
+      <img class="manga-cover" src="out-0 (6).webp" alt="Couverture de Sailor Moon" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">Sailor Moon</h3>
+        <p class="manga-author">Naoko Takeuchi</p>
+        <button class="download-btn" onclick="downloadManga('sailor-moon')">Visionner</button>
+      </div>
+    </div>
+
+    <!-- Seinen Manga -->
+    <div class="manga-item" data-genre="seinen">
+      <img class="manga-cover" src="out-0 (2).webp" alt="Couverture de Berserk" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">Berserk</h3>
+        <p class="manga-author">Kentaro Miura</p>
+        <button class="download-btn" onclick="downloadManga('berserk')">Visionner</button>
+      </div>
+    </div>
+    <div class="manga-item" data-genre="seinen">
+      <img class="manga-cover" src="out-0 (7).webp" alt="Couverture de Tokyo Ghoul" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">Tokyo Ghoul</h3>
+        <p class="manga-author">Sui Ishida</p>
+        <button class="download-btn" onclick="downloadManga('tokyo-ghoul')">Visionner</button>
+      </div>
+    </div>
+
+    <!-- Josei Manga -->
     <div class="manga-item" data-genre="josei">
       <img class="manga-cover" src="out-0 (4).webp" alt="Couverture de Nana" width="220" height="300">
       <div class="manga-info">
         <h3 class="manga-title">Nana</h3>
         <p class="manga-author">Ai Yazawa</p>
         <button class="download-btn" onclick="downloadManga('nana')">Visionner</button>
+      </div>
+    </div>
+    <div class="manga-item" data-genre="josei">
+      <img class="manga-cover" src="out-0 (8).webp" alt="Couverture de Paradise Kiss" width="220" height="300">
+      <div class="manga-info">
+        <h3 class="manga-title">Paradise Kiss</h3>
+        <p class="manga-author">Ai Yazawa</p>
+        <button class="download-btn" onclick="downloadManga('paradise-kiss')">Visionner</button>
       </div>
     </div>
   </div>
